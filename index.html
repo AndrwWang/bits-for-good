@@ -37,6 +37,10 @@
       border-radius: 20px;
       background-color: #909090;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      
+       border-image-source: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      border-image-slice: 1;
+      animation: rainbow 5s linear infinite;
     }
 
     .card h2,
@@ -53,6 +57,19 @@
     .card p.title {
       font-size: 14px;
       font-style: italic;
+    }
+    
+    @keyframes rainbow {
+      0% {
+        border-image-source: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      }
+      
+      50% {
+        border-image-source: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+      }
+      100% {
+        border-image-source: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      }
     }
   </style>
 </head>
